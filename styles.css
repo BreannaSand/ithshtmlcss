@@ -1,0 +1,24 @@
+.hero-section {
+    background-image: url('images/Arthurs-Outside.jpg');
+    background-position: center;
+    color: White;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+    text-align: center;
+}
+
+/*tablet breakpoint*/
+@media (min-width: 768px) {
+    .hero-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+}
+
+/*desktop breakpoint*/
+@media (min-width: 980px) {
+    .hero-section {}
+}
