@@ -1,24 +1,89 @@
-.hero-section {
-    background-image: url('images/Arthurs-Outside.jpg');
-    background-position: center;
-    color: White;
+body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    align-items: center;
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-areas:
+        "header"
+        "main-content"
+        "image-gallery"
+        "footer";
     text-align: center;
+    height: 100vh;
+}
+
+body h2 {
+    font-size: 16px;
+}
+
+body p {
+    padding: 10%;
+}
+
+.header {
+    background-image: url('images/Arthurs-Outside.jpg');
+    background-position: center;
+    color: black;
+    grid-area: header;
+    text-shadow: (0, 0, 0, 1);
+
+}
+
+.main-content {
+    grid-area: main-content;
+}
+
+.image-gallery {
+    grid-area: image-gallery;
+    border:
+        display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.image-gallery img {
+    width: calc(50% - 10px);
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
 }
 
 /*tablet breakpoint*/
 @media (min-width: 768px) {
-    .hero-section {
+    body {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "main-content image-gallery"
+            "footer footer";
+        height: 100vh;
+    }
+
+    header h1 {
+
+        padding-top: 30px;
+        padding-bottom: none;
+        font-size: 50px;
+
+    }
+
+    header p {
+        padding: none;
     }
 }
 
 /*desktop breakpoint*/
 @media (min-width: 980px) {
-    .hero-section {}
+    body {}
 }
