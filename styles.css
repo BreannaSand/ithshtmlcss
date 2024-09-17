@@ -9,15 +9,14 @@ body {
         "footer";
     text-align: center;
     height: 100vh;
+    background-color: lightyellow;
 }
 
 body h2 {
-    font-size: 16px;
+    font-size: 14px;
+    color: darkbrown;
 }
 
-body p {
-    padding: 10%;
-}
 
 .header {
     background-image: url('images/Arthurs-Outside.jpg');
@@ -28,8 +27,30 @@ body p {
 
 }
 
+nav {
+    background-color: darkolivegreen;
+
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+}
+
+
+
+.header nav li {
+    list-style-type: none;
+
+}
+
 .main-content {
     grid-area: main-content;
+    border-style: solid;
+    border-color: darkolivegreen;
+    border-width: 16px 16px 2px 2px;
 }
 
 .image-gallery {
@@ -39,6 +60,9 @@ body p {
     flex-wrap: wrap;
     gap: 10px;
     padding: 20px;
+    border-style: solid;
+    border-color: darkolivegreen;
+    border-width: 16px 16px 2px 2px;
 }
 
 .image-gallery img {
@@ -46,15 +70,30 @@ body p {
     height: auto;
     object-fit: cover;
     border-radius: 8px;
+    border-color: darkolivegreen;
+    border-style: solid;
+    border-width: 2px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: translate(5px, 5px);
 }
 
 .footer {
     grid-area: footer;
+    border-style: solid;
+    border-color: darkolivegreen;
+    border-width: 16px 16px 2px 2px;
 }
 
 .footer-container {
     display: flex;
     flex-direction: row;
+}
+
+footer:nth-child(1) {
+    padding: none;
 }
 
 /*tablet breakpoint*/
@@ -80,6 +119,13 @@ body p {
 
     header p {
         padding: none;
+    }
+
+    .image-gallery img {
+        width: calc(100% - 10px);
+        gap: 20px;
+        padding-right: 30px;
+
     }
 }
 
