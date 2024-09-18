@@ -23,13 +23,27 @@ body h2 {
     background-position: center;
     color: black;
     grid-area: header;
+    flex-direction: column;
+    justify-content: flex-end;
     text-shadow: (0, 0, 0, 1);
-
+    height: 200px;
 }
 
 nav {
     background-color: darkolivegreen;
+    width: 100%;
 
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: lightyellow;
 }
 
 ul {
@@ -37,20 +51,22 @@ ul {
     align-items: center;
     justify-content: space-around;
     margin: 0;
+    align-items: center;
 }
 
 
 
-.header nav li {
+li {
     list-style-type: none;
-
+    margin: 0 20px;
+    font-weight: bold;
 }
 
 .main-content {
     grid-area: main-content;
     border-style: solid;
     border-color: darkolivegreen;
-    border-width: 16px 16px 2px 2px;
+    border-width: 2px 16px 2px 2px;
 }
 
 .image-gallery {
@@ -109,17 +125,12 @@ footer:nth-child(1) {
         height: 100vh;
     }
 
-    header h1 {
+    header {
 
-        padding-top: 30px;
-        padding-bottom: none;
-        font-size: 50px;
+        background-size: cover;
 
     }
 
-    header p {
-        padding: none;
-    }
 
     .image-gallery img {
         width: calc(100% - 10px);
